@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="helloworld" namespace="/" extends="struts-default">
+		<action name="login" class="action.LoginAction" method="login">
+<!-- 			<result name="success">/admin/notifications.jsp</result> -->
+<!-- 			<result name="error">login.jsp</result> -->
+		</action>
+				
+		<action name="notifications" class="action.MeetingAction" method="getLast3MeetingsByEmployeeId"></action>
+		<action name="MeetingDetail" class="action.EmployeeAction" method="getEmployeesByMeetingID"></action>
+		<action name="getAllMeetingsByBookerID" class="action.MeetingAction" method="getAllMeetingsByBookerID"></action>
+		<action name="getMeetingsByEmpID" class="action.MeetingAction" method="getMeetingsByEmpID"></action>
+		<action name="Init" class="action.InitAction" method="InitProccessing"></action>
+	</package>
+</struts>
